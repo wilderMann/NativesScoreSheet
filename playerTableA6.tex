@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{array}
+\usepackage{tabularray}
+\usepackage{eso-pic}
+\usepackage{graphics}
+\usepackage[a6paper, landscape, total={140mm, 95mm}]{geometry}
+\newcommand{\dumblang}[2]{{#2}}
+\usepackage[\dumblang{english}{german}]{babel}
+
+
+
+\newcommand\BackgroundPic{%
+	\put(0pt,0pt){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+			\centering
+			\includegraphics[width=\paperwidth,height=\paperheight,%
+			keepaspectratio]{background.png}%
+			\vfill
+}}}
+
+\newcommand{\RH}{0.5cm}
+\newcommand{\CW}{1cm}
+
+\newcommand{\playertable}{
+	\begin{tblr}{colspec={|Q[l,1.8cm]|[dotted]|[2pt]|[dotted] Q[m,\CW]|Q[m,\CW]|Q[m,\CW]|Q[m,\CW]|Q[m,\CW]|Q[m,\CW]|Q[m,\CW]|Q[m,\CW]|},rowspec={|Q[m,\RH]|[dotted]|[2pt]|[dotted]Q[m,\RH]|Q[m,\RH]|Q[m,\RH]|Q[m,\RH]|Q[m,\RH]|Q[m,\RH]|Q[m,\RH]|Q[m,\RH]|Q[m,\RH]|Q[m,\RH]|Q[m,\RH]|[dotted]|Q[m,\RH]|}}
+		\textbf{\dumblang{Player}{Spieler}} &&&&&&&&\\
+		\textbf{\dumblang{Corn}{Mais}} &&&&&&&&\\  
+		\textbf{\dumblang{Salmon}{Lachs}} &&&&&&&&\\
+		\textbf{\dumblang{Bison}{Bison}} &&&&&&&&\\
+		\textbf{\dumblang{Totems}{Totem}} &&&&&&&&\\
+		\textbf{\dumblang{Scalps}{Gefangene}} &&&&&&&&\\
+		\textbf{\dumblang{Natives}{Stammes-mitglieder}} &&&&&&&&\\
+		\textbf{\dumblang{Rites}{Rituale}} &&&&&&&&\\
+		\textbf{\dumblang{War}{Konflikt}} &&&&&&&&\\
+		\textbf{\dumblang{Peace}{Eintracht}} &&&&&&&&\\
+		\textbf{\dumblang{Legends}{Legenden}} &&&&&&&&\\
+		\textbf{\dumblang{Minus Points}{Abzüge \& Flüche}} &&&&&&&&\\
+		\textbf{\dumblang{Final}{Gesamt}} &&&&&&&&\\
+\end{tblr}}
+\begin{document}	
+	\AddToShipoutPictureFG{\includegraphics[width=\paperwidth,height=\paperheight]{background.png}}
+	\begin{center}
+		\playertable
+		\playertable
+		\playertable
+		\playertable
+		\playertable
+		\playertable
+		\playertable
+		\playertable
+	\end{center}
+\end{document}
