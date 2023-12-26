@@ -1,7 +1,7 @@
 # NativesScoreSheet
 This is a score sheet for the card game NATIVES, made in LATEX. Available in English and German.
 
-If you want to print it in German change this line in playerTableA6: `\newcommand{\dumblang}[2]{{#2}}`
+If you want to change languages, modify this line in playerTableA6: `\newcommand{\dumblang}[2]{{#2}}`
 - #1 is English
 - #2 is German
 
